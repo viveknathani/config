@@ -8,7 +8,9 @@ set ruler
 set encoding=utf-8
 
 " Darkspace (whitespace for a dark setup :p)		
-set tabstop=2
+set tabstop=4
+set softtabstop=4
+set expandtab
 
 " Ye kaha dark hai ye toh zindagi hai.
 set background=dark
