@@ -14,3 +14,4 @@ nvm ls-remote
 printf "Pick a version number to install: "
 read VERSION 
 nvm install $VERSION
+# random
