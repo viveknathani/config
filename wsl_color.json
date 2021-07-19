@@ -1,25 +1,27 @@
 {   
     "schemes": [
         {
-            "background":  "#000000",
-            "black":  "#4E9A06",
-            "blue":  "#3465A4",
-            "brightBlack":  "#555753",
-            "brightBlue":  "#729FCF",
-            "brightCyan":  "#34E2E2",
-            "brightGreen":  "#8AE234",
-            "brightPurple":  "#AD7FA8",
-            "brightRed":  "#EF2929",
-            "brightWhite":  "#EEEEEE",
-            "brightYellow":  "#FCE94F",
-            "cyan":  "#06989A",
-            "foreground":  "#EEEEEE",
-            "green":  "#b9dbb6",
-            "name":  "Personal",
-            "purple":  "#75507B",
-            "red":  "#CC0000",
-            "white":  "#D3D7CF",
-            "yellow":  "#C4A000"
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#2A7FEE",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEE",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#06989A",
+            "foreground": "#EEEEEE",
+            "green": "#B9DBB6",
+            "name": "Personal",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
         }
     ]
 }    

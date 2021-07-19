@@ -14,4 +14,15 @@ nvm ls-remote
 printf "Pick a version number to install: "
 read VERSION 
 nvm install $VERSION
-# random
+
+printf "Go needs to be installed. Give path to downloaded .tar.gz file: "
+read GO_DOWNLOAD_PATH
+
+sudo tar -C /usr/local/ GO_DOWNLOAD_PATH
+
+echo "Things that require manual setup:"
+echo "1. Get the SSH key and set it up with any application that requires it."
+echo "2. Setup github.com/viveknathani/hello"
+echo "3. Terminal background is black."
+echo "4. Monaco font face."
+
