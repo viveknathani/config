@@ -124,4 +124,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/go/bin
-export PATH=$PATH:~/hello
+export PATH=$PATH:~/bin/hello
