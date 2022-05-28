@@ -18,6 +18,9 @@ set backspace=indent,eol,start
 set background=dark
 hi LineNr ctermfg=220
 
+" Don't write to history file
+let g:netrw_dirhistmax=0
+
 call plug#begin()
 
 Plug 'prabirshrestha/vim-lsp'
