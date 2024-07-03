@@ -119,13 +119,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# installed binaries
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin
 # Everything for Go
-export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/.go
 export GOBIN=$GOPATH/bin/
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOBIN
 
-# custom tools
-export PATH=$PATH:~/bin/hello
-export PATH=$PATH:~/bin/
+# pnpm
+PNPM_HOME="/Users/viveknathani/Library/pnpm"
+export PATH=$PATH:$PNPM_HOME
+
