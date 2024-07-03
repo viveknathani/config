@@ -1,3 +1,9 @@
+-- set tab to spaces and tab size to 2
+vim.opt.expandtab = true   -- use spaces instead of tabs
+vim.opt.shiftwidth = 2     -- number of spaces to use for each step of (auto)indent
+vim.opt.softtabstop = 2    -- number of spaces that a <Tab> counts for while editing
+vim.opt.tabstop = 2        -- number of spaces that a <Tab> counts for
+
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -13,13 +19,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
+-- make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
+-- this is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
+-- setup lazy.nvim
 require("lazy").setup({
   spec = {
     	{
@@ -36,7 +42,18 @@ require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "nvim-telescope/telescope.nvim" },
         { "nvim-lua/plenary.nvim" },
-	{ "neovim/nvim-lspconfig" }
+	{ "neovim/nvim-lspconfig" },
+	{ 
+		"ms-jpq/coq_nvim",
+		branch = "coq",
+    		requires = {
+      			{ "ms-jpq/coq.artifacts", branch = "artifacts" },  -- optional, for more syntax support
+      			{ "ms-jpq/coq.thirdparty", branch = "3p" },  -- optional, for third-party support
+    		},
+    		config = function()
+      			vim.g.coq_settings = { auto_start = 'shut-up' }
+    		end,
+	}
   },
   -- automatically check for plugin updates
   checker = { enabled = true },
@@ -121,11 +138,11 @@ vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', { noremap = t
 
 
 -- Configure LSP servers
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
+local coq = require("coq")
 
 -- Example configuration for Python using pyright
-lspconfig.pyright.setup{}
+lspconfig.pyright.setup(coq.lsp_ensure_capabilities())
 
 -- Example configuration for TypeScript using tsserver
-lspconfig.tsserver.setup{}
-
+lspconfig.tsserver.setup(coq.lsp_ensure_capabilities())
