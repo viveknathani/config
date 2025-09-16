@@ -3,3 +3,5 @@ font-family = 0xProto Nerd Font Mono
 font-size = 16
 font-thicken = true
 command = /opt/homebrew/bin/bash --login
+cursor-style = block
+shell-integration-features = no-cursor
