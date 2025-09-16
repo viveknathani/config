@@ -56,9 +56,9 @@ fi
 # \[\033[01m\]
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]viveknathani:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}viveknathani@:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -130,4 +130,27 @@ export PATH=$PATH:$GOBIN
 # pnpm
 PNPM_HOME="/Users/viveknathani/Library/pnpm"
 export PATH=$PATH:$PNPM_HOME
+
+. "$HOME/.cargo/env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/viveknathani/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/viveknathani/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/viveknathani/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/viveknathani/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+export PATH=$HOME/.rill:$PATH # Added by Rill install
+
+. "$HOME/.local/bin/env"
+
+# Added by Windsurf
+export PATH="/Users/viveknathani/.codeium/windsurf/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
 
